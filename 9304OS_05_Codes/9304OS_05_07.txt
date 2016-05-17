@@ -1,0 +1,7 @@
+    20	post '/new/?' do 
+    21	  # save the list 
+    22	end 
+    23	 
+    24	get '/edit/:id/?' do 
+    25	  # check user permission and show the edit page 
+    26	end 

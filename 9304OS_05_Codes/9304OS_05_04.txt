@@ -1,0 +1,14 @@
+     1	require 'sinatra' 
+     2	require 'sequel' 
+     3	 
+     4	class Todo < Sinatra::Application 
+     5	  configure do 
+     6	    DB = Sequel.connect("mysql://root:root@localhost/todo") 
+     7	 
+     8	    Dir[File.join(File.dirname(__FILE__),'models','*.rb')].each { |model| require model } 
+     9	  end 
+    10	end 
+    11	 
+    12	get '/?' do 
+    13	  all_lists =  List.all 
+    14	end 

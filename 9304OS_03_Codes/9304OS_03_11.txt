@@ -1,0 +1,9 @@
+1 require 'sinatra' 
+2 require 'bundler/setup' 
+3 Bundler.require 
+4
+5 ENV["RACK_ENV"] = "development" 
+6
+7 require File.join(File.dirname(__FILE__), 'app.rb') 
+8 
+9 Todo .start!

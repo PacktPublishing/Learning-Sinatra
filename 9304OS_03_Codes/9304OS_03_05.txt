@@ -1,0 +1,12 @@
+
+     3	class Todo < Sinatra::Base
+     4	  set :environment, ENV['RACK_ENV'] 
+     5	 
+     6	  configure do 
+     7	  end 
+     8	 
+     9	  Dir[File.join(File.dirname(__FILE__),'models','*.rb')].each { |model| require model } 
+    10	  Dir[File.join(File.dirname(__FILE__),'lib','*.rb')].each { |lib| load lib } 
+    11	 
+    12	end 
+

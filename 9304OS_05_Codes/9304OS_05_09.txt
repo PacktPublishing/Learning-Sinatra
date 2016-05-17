@@ -1,0 +1,7 @@
+    28	post '/edit/?' do 
+    29	  # update the list 
+    30	end 
+    31	 
+    32	post '/permission/?' do 
+    33	  # update permission 
+    34	end 

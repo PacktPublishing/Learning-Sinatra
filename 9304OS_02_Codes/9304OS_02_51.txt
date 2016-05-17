@@ -1,0 +1,9 @@
+a = 1
+b = 2
+if a > b
+  puts "The value of a is greater than the value of b"
+elsif a < b
+  puts "The value of a is less than the value of b"
+else
+  puts "The value of a is equal to the value of b"
+end

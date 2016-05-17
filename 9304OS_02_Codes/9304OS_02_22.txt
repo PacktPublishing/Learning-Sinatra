@@ -1,0 +1,4 @@
+:003 > hash.include? :key1
+ => true
+:004 > hash.include? 'k'
+ => false

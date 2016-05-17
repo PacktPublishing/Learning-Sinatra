@@ -1,0 +1,35 @@
+    54	post '/permission/?' do
+    55	  user = User.first(id: session[:user_id])
+    56	  list = List.first(id: params[:id])
+    57	  can_change_permission = true
+    58	
+    59	  if list.nil?
+    60	    can_change_permission = false
+    61	  elsif list.shared_with != 'public'
+    62	    permission = Permission.first(list: list, user: user)
+    63	    if permission.nil? or permission.permission_level == 'read_only'
+    64	      can_change_permission = false
+    65	    end
+    66	  end
+    67	
+    68	  if can_change_permission
+    69	    list.permission = params[:new_permissions]
+    70	    list.save
+    71	
+    72	    current_permissions = Permission.first(list: list)
+    73	    current_permissions.each do |perm|
+    74	      perm.destroy
+    75	    end
+    76	
+    77	    if params[:new_permissions] == 'private' or parms[:new_permissions] == 'shared'
+    78	      user_perms.each do |perm|
+    79	        u = User.first(perm[:user])
+    80	        Permission.create(list: list, user: u, permission_level: perm[:level], created_at: Time.now, updated_at: Time.now)
+    81	      end
+    82	    end
+    83	
+    84	    redirect request.referer
+    85	  else
+    86	    haml :error, locals: {error: 'Invalid permissions'}
+    87	  end
+    88	end

@@ -1,0 +1,13 @@
+     1	Sequel.migration do 
+     2	  change do 
+     3	    create_table :items do 
+     4	      primary_key :id 
+     5	      String :name, :length => 128, :null => false 
+     6	      String :description, :length => 256 
+     7	      foreign_key :user_id, :users, :null => false 
+     8	      foreign_key :list_id, :lists, :null => false 
+     9	      DateTime :created_at 
+    10	      DateTime :updated_at 
+    11	    end 
+    12	  end 
+    13	end 

@@ -1,0 +1,5 @@
+    21	post '/new/?' do
+    22	  user = User.first(name: session[:user_id])
+    23	  List.new_list params[:title], params[:items], user
+    24	  redirect request.referer
+    25	end

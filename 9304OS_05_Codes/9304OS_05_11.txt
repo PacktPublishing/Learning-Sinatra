@@ -1,0 +1,7 @@
+    36	get '/signup/?' do 
+    37	  # show signup form 
+    38	end 
+    39	 
+    40	post '/signup/?' do 
+    41	  # save the user data 
+    42	end

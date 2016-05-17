@@ -1,0 +1,22 @@
+    20	  def self.edit_list id, name, items, user
+    21	    list = List.first(id: id)
+    22	    list.name = name
+    23	    list.updated_at = Time.now
+    24	    list.save
+    25	
+    26	    items.each do |item|
+    27	      if item[:deleted]
+    28	        i = Item.first(item[:id]).destroy
+    29	        next
+    30	      end
+    31	      i = Item.first(item[:id])
+    32	      if i.nil?
+    33	        Item.create(name: item[:name], description: item[:description], list: list, user: user, created_at: Time.now, updated_at: Time.now)
+    34	      else
+    35	        i.name = item[:name]
+    36	        i.description = item[:description]
+    37	        i.updated_at = Time.now
+    38	        i.save
+    39	      end
+    40	    end
+    41	  end

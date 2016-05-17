@@ -1,0 +1,2 @@
+user = User.create(name:'user1', password:'password')
+user.permissions

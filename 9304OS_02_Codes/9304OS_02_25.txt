@@ -1,0 +1,3 @@
+arr.each do |e|
+  puts e
+end

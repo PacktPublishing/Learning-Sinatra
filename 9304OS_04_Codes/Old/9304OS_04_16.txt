@@ -1,0 +1,1 @@
+sequel -m path/to/migrations mysql://user:password@host/database

@@ -1,0 +1,6 @@
+class Car
+  def initialize(manufacturer, cost)
+    @manufacturer = manufacturer
+    @cost = cost
+  end
+end

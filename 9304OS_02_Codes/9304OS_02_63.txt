@@ -1,0 +1,4 @@
+2.0.0-p195 :003 > "hello".equal? "hello"
+ => false
+2.0.0-p195 :004 > :hello.equal? :hello
+ => true

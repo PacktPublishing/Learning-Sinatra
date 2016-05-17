@@ -1,0 +1,6 @@
+     1	require 'sequel' 
+     2	 
+     3	class Permission < Sequel::Model 
+     4	  many_to_one :user 
+     5	  many_to_one :list 
+     6	end 

@@ -1,0 +1,8 @@
+class Car
+  def self.about
+    puts "Class about cars."
+  end
+  def cost
+    puts @cost
+  end
+end

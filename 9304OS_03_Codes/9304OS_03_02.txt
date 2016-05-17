@@ -1,0 +1,7 @@
+get '/' do
+  # code
+end
+
+post '/something' do
+  # code
+end

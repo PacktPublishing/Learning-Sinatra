@@ -1,0 +1,6 @@
+:001 > hash = {:key1 => 'value1', :key2 => 2}
+ => {:key1=>"value1", :key2=>2}
+:002 > hash.each { |k, v| puts hash[k] }
+value1
+2
+ => {:key1=>"value1", :key2=>2}

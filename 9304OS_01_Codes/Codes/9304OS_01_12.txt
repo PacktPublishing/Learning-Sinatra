@@ -1,0 +1,5 @@
+%body
+  %div#comment
+    %form
+      %input{:type => 'text'}
+

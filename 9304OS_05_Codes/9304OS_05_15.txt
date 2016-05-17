@@ -1,0 +1,4 @@
+    12	get '/?' do 
+    13	  all_lists =  List.all 
+    14    haml :lists, locals: {lists: all_lists}
+    15	end 

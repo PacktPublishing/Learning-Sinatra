@@ -1,0 +1,9 @@
+begin
+  # statements
+rescue
+  # handle error
+else
+  # statements to be executed if there are no errors
+ensure
+  # statements to be executed whether an error occurred or not
+end

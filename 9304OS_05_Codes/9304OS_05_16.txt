@@ -1,0 +1,3 @@
+    17	get '/new/?' do
+    18	  haml :new_list
+    19	end

@@ -1,0 +1,3 @@
+do |e|
+  puts e
+end

@@ -1,0 +1,20 @@
+    27	get '/edit/:id/?' do
+    28	  list = List.first(id: id)
+    29	  can_edit = true
+    30	
+    31	  if list.nil?
+    32	    can_edit = false
+    33	  elsif list.shared_with == 'public'
+    34	    user = User.first(id: session[:user_id])
+    35	    permission = Permission.first(list: list, user: user)
+    36	    if permission.nil? or permission.permission_level == 'read_only'
+    37	      can_edit = false
+    38	    end
+    39	  end
+    40	
+    41	  if can_edit
+    42	    haml :edit_list, locals: {list: list} if can_edit
+    43	  else
+    44	    haml :error, locals: {error: 'Invalid permissions'}
+    45	  end
+    46	end

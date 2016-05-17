@@ -1,0 +1,24 @@
+class Example
+  # default is public
+  def method1
+    # code
+  end
+
+  private
+  # all methods defined below this will be private
+  def method2
+    # code code code
+  end
+
+  protected
+  # all methods defined below this will be protected
+  def method3
+    # more code
+  end
+
+  public
+  # all methods defined below this will be public
+  def method4
+    # and just a little more of code
+  end
+end

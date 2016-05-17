@@ -1,0 +1,2 @@
+Item.create(name:'item1', list:list, user:user)
+

@@ -1,0 +1,74 @@
+mysql> use todo;
+Database changed
+mysql> show tables;
++----------------+
+| Tables_in_todo |
++----------------+
+| items          |
+| lists          |
+| logs           |
+| permissions    |
+| schema_info    |
+| users          |
++----------------+
+6 rows in set (0.01 sec)
+
+mysql> desc users;
++------------+--------------+------+-----+---------+----------------+
+| Field      | Type         | Null | Key | Default | Extra          |
++------------+--------------+------+-----+---------+----------------+
+| id         | int(11)      | NO   | PRI | NULL    | auto_increment |
+| name       | varchar(255) | NO   | UNI | NULL    |                |
+| password   | varchar(255) | NO   |     | NULL    |                |
+| created_at | datetime     | YES  |     | NULL    |                |
++------------+--------------+------+-----+---------+----------------+
+4 rows in set (0.03 sec)
+
+mysql> desc lists;
++-------------+-----------------------------------+------+-----+---------+----------------+
+| Field       | Type                              | Null | Key | Default | Extra          |
++-------------+-----------------------------------+------+-----+---------+----------------+
+| id          | int(11)                           | NO   | PRI | NULL    | auto_increment |
+| name        | varchar(255)                      | NO   |     | NULL    |                |
+| shared_with | enum('private','shared','public') | NO   |     | private |                |
+| created_at  | datetime                          | YES  |     | NULL    |                |
++-------------+-----------------------------------+------+-----+---------+----------------+
+4 rows in set (0.01 sec)
+
+mysql> desc items;
++-------------+--------------+------+-----+---------+----------------+
+| Field       | Type         | Null | Key | Default | Extra          |
++-------------+--------------+------+-----+---------+----------------+
+| id          | int(11)      | NO   | PRI | NULL    | auto_increment |
+| name        | varchar(255) | NO   |     | NULL    |                |
+| description | varchar(255) | YES  |     | NULL    |                |
+| user_id     | int(11)      | YES  | MUL | NULL    |                |
+| list_id     | int(11)      | YES  | MUL | NULL    |                |
+| created_at  | datetime     | YES  |     | NULL    |                |
+| updated_at  | datetime     | YES  |     | NULL    |                |
++-------------+--------------+------+-----+---------+----------------+
+7 rows in set (0.01 sec)
+
+mysql> desc permissions;
++------------------+--------------------------------+------+-----+---------+-------+
+| Field            | Type                           | Null | Key | Default | Extra |
++------------------+--------------------------------+------+-----+---------+-------+
+| user_id          | int(11)                        | NO   | PRI | 0       |       |
+| list_id          | int(11)                        | NO   | PRI | 0       |       |
+| permission_level | enum('read_only','read_write') | NO   |     | NULL    |       |
+| created_at       | datetime                       | YES  |     | NULL    |       |
+| updated_at       | datetime                       | YES  |     | NULL    |       |
++------------------+--------------------------------+------+-----+---------+-------+
+5 rows in set (0.01 sec)
+
+mysql> desc logs;
++------------+--------------+------+-----+---------+----------------+
+| Field      | Type         | Null | Key | Default | Extra          |
++------------+--------------+------+-----+---------+----------------+
+| id         | int(11)      | NO   | PRI | NULL    | auto_increment |
+| user_id    | int(11)      | YES  | MUL | NULL    |                |
+| list_id    | int(11)      | YES  | MUL | NULL    |                |
+| log_line   | varchar(255) | NO   |     | NULL    |                |
+| created_at | datetime     | YES  |     | NULL    |                |
++------------+--------------+------+-----+---------+----------------+
+5 rows in set (0.01 sec)

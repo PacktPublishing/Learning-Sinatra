@@ -1,0 +1,9 @@
+year = 2014
+case
+when year % 400 == 0
+  puts "Leap year"
+when year % 100 == 0
+  puts "Not a leap year"
+else year % 4 == 0
+  puts "Leap year"
+end

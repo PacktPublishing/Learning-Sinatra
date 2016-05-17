@@ -1,0 +1,2 @@
+1 require 'sinatra' 
+2 require 'bundler/setup' 

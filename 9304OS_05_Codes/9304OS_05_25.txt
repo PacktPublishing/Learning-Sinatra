@@ -1,0 +1,7 @@
+   103	get '/login/?' do
+   104	  if session[:user_id].nil?
+   105	    haml :login
+   106	  else
+   107	    haml :error, locals: {error: 'Please log out first'}
+   108	  end
+   109	end

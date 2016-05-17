@@ -1,0 +1,2 @@
+item = list.add_items(name:'item1_1', user:user)
+list.remove_item(item)

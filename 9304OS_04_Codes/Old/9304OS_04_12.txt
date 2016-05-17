@@ -1,0 +1,8 @@
+     1	require 'sequel' 
+     2	 
+     3	class Log < Sequel::Model 
+     4	  set_primary_key :id 
+     5	 
+     6	  many_to_one :user 
+     7	  many_to_one :list 
+     8	end 

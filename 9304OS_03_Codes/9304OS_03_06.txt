@@ -1,0 +1,1 @@
+     4	  set :environment, ENV['RACK_ENV'] 

@@ -1,0 +1,6 @@
+def foobar *all_args
+  puts all_args.class
+  puts all_args.length
+end
+
+foobar 1, 2, 3, 4, 5

@@ -1,0 +1,13 @@
+begin
+  for i in [1, 2, 3, 4, 5]
+    raise if i == 4
+    puts i
+  end
+rescue
+  puts "Reached 4"
+  next
+else
+  puts "No errors"
+ensure
+  puts "Iteration completed."
+end

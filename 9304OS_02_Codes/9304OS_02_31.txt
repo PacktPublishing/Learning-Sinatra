@@ -1,0 +1,11 @@
+  def self.about
+    puts "Class about cars."
+  end
+
+  def about
+    puts "Class about cars."
+  end
+
+  def <<about
+    puts "Class about cars."
+  end

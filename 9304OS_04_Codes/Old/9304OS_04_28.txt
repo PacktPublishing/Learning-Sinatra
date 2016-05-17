@@ -1,0 +1,1 @@
+list.add_permission(user:user, permission_level:'read_write')

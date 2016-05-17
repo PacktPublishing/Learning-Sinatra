@@ -1,0 +1,7 @@
+    32	post '/permission/?' do 
+    33	  # update permission 
+    34	end 
+    35	 
+    36	get '/signup/?' do 
+    37	  # show signup form 
+    38	end 

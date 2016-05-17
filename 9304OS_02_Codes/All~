@@ -1,0 +1,364 @@
+$ \curl -sSL https://get.rvm.io | bash -s stable
+
+$ source ~/.rvm/scripts/rvm
+
+$ type rvm | head -n 1
+rvm is a function
+
+$ rvm list known
+
+$ rvm install 2.0.0-p195
+
+2.0.0-p195 :001 > puts "Hello World!" 
+Hello World! 
+=> nil
+
+2.0.0-p195 :002> "foo".methods
+
+Fixnum – even?,  odd?, to_f, to_s, times
+Float – floor, ceiling, round, to_i, to_s
+
+2.0.0-p195 :001 > "foo".object_id 
+ => 16351980 
+2.0.0-p195 :002 > "foo".object_id 
+ => 16362580 
+2.0.0-p195 :003 > :foo.object_id 
+ => 535048 
+2.0.0-p195 :004 > :foo.object_id 
+ => 535048 
+
+arr = [1, 2, 3]
+arr2 = [1, 'Hello', 'World', [4, 5, 6]]
+
+arr[0] = 1, arr[1] = 2, arr[2] = 3, arr[-1] = 3, arr[-2] = 2, arr[-3] = 1
+
+arr = [1, 2, 3]
+arr.each do |e|
+  puts e
+end
+
+ 
+2.0.0-p195 :001 > arr = [1, 2, 3] 
+ => [1, 2, 3] 
+2.0.0-p195 :002 > arr.each do |e| 
+2.0.0-p195 :003 >     puts e 
+2.0.0-p195 :004?>   end 
+1 
+2 
+3 
+=> [1, 2, 3]
+ 
+:005 > arr.include? 1 
+ => true 
+:006 > arr.include? 4 
+ => false
+
+
+:007 >   arr.map do |e| 
+:008 >     e*2 
+:009?>   end 
+ 
+:010 > arr = arr.map { |e| e*2 } 
+ => [2, 4, 6] 
+ 
+:011 > arr.map! { |e| e*2 } 
+ => [2, 4, 6] 
+
+:012 >   arr.select {|e| e.odd?} 
+ => [1, 3] 
+:013 > arr.select {|e| e.even?} 
+ => [2] 
+ 
+hash = {'foo' => 'bar'}
+hash2 = {[1,2,3] => {}}
+hash3 = {{}=>'hello'}
+ 
+hash4 = {[] => 'string', 'hello' => {}}
+
+:001 > hash = {:key1 => 'value1', :key2 => 2} 
+ => {:key1=>"value1", :key2=>2} 
+:002 > hash.each { |k, v| puts hash[k] }
+value1 
+2 
+ => {:key1=>"value1", :key2=>2}
+
+:003 > hash.include? :key1 
+ => true 
+:004 > hash.include? 'k' 
+ => false 
+
+:005 > hash.keys 
+ => [:key1, :key2]
+
+:006 > hash.select {|k,v| hash[k] == 2} 
+ => {:key2=>2}
+
+arr.each do |e|
+  puts e
+end
+
+do |e|
+  puts e
+end
+ 
+module <module_name>
+  class <class_name>
+  end
+end
+ 
+module Vehicle
+  class Car
+  end
+end
+ 
+class Car
+  def initialize(manufacturer, cost)
+    @manufacturer = manufacturer
+    @cost = cost
+  end
+end
+ 
+class Car
+  def self.about
+    puts "Class about cars."
+  end
+  def cost
+    puts @cost
+  end
+end
+ 
+  def self.about
+    puts "Class about cars."
+  end
+  def about
+    puts "Class about cars."
+  end
+  def <<about
+    puts "Class about cars."
+  end
+ 
+def method_name
+  # code
+end
+ 
+def method_name arg1, arg2
+  # code
+end
+
+def method_name (arg1, arg2)
+  # code
+end
+
+def method_name arg1, arg2='hello'
+  # code
+end
+
+def foo a, b = 10
+  puts a, b
+end
+foo 1, 2
+
+1 
+2 
+
+def foo a, b = 10
+  puts a, b
+end
+foo 1
+
+
+1 
+10 
+
+def foo arg1, arg2, arg3 = value, arg4 = value
+
+def foo a, b = 10
+
+def foo a = 10, b
+ 
+def method_name a = 1, b, c = 2
+ 
+def foo a = 10, b = 11, c
+  puts a, b, c
+end
+foo 1, 2
+ 
+1 
+11 
+2
+
+def method_name arg1, arg2, *other_args
+  # code
+end
+
+def foobar *all_args 
+  puts all_args.class
+  puts all_args.length
+end
+foobar 1, 2, 3, 4, 5
+ 
+ 
+Array 
+5 
+
+class Example
+  # default is public
+  def method1
+    # code
+  end
+  private
+  # all methods defined below this will be private
+  def method2
+    # code code code
+  end
+  protected
+  # all methods defined below this will be protected
+  def method3
+    # more code
+  end
+  public
+  # all methods defined below this will be public
+  def method4
+    # and just a little more of code
+  end
+end
+ 
+if <condition> 
+  <statements>
+elsif <condition>
+  <statements>
+else
+  <statements>
+end
+
+a = 1
+b = 2
+if a > b
+  puts "The value of a is greater than the value of b"
+elsif a < b
+  puts "The value of a is less than the value of b"
+else
+  puts "The value of a is equal to the value of b"
+end
+ 
+unless <condition>
+  <statements>
+end
+
+a = 1
+b = 2
+unless a == b
+  puts "The value of a is not equal to the value of b"
+end
+
+<condition> ? <truth> : <falsity>
+
+a = 1
+b = 2
+a > b ? puts a : puts b
+ 
+puts “Hello World!” if a == 1
+
+puts “Hello World!” unless a == 1
+
+puts “Hello World!” if not a == 1
+
+case <expression>
+when <value1>
+  <statements>
+when <value2>
+  <statements>
+when <value3>
+  <statements>
+else
+  <statements>
+end
+
+year = 2014
+case 
+when year % 400 == 0
+  puts “Leap year”
+when year % 100 == 0
+  puts “Not a leap year”
+else year % 4 == 0 
+  puts “Leap year”
+end
+
+2.0.0-p195 :001 > 10 <=> 15 
+ => -1 
+
+2.0.0-p195 :002 > 1.eql? 1.0 
+ => false 
+
+2.0.0-p195 :003 > "hello".equal? "hello" 
+ => false 
+2.0.0-p195 :004 > :hello.equal? :hello 
+ => true 
+
+while <condition>
+  <statements>
+end
+
+until <condition>
+  <statements>
+end
+ 
+Fixnum.times do
+  <statements>
+end
+ 
+for <variable> in <object>
+  <statements>
+end
+
+for i in [1, 2, 3, 4, 5]
+  puts i
+end
+
+for i in [1, 2, 3, 4, 5, 6]
+  redo if i == 2 
+  next if i == 3 
+  break if i == 4 
+  retry if I == 5
+  puts i 
+end 
+
+begin 
+  # statements
+rescue 
+  # handle error 
+else 
+  # statements to be executed if there are no errors
+ensure 
+  # statements to be executed whether an error occurred or not
+end
+ 
+begin 
+  # statements
+rescue 
+  # handle error 
+else 
+  # statements to be executed if there are no errors
+ensure 
+  # statements to be executed whether an error occurred or not
+end
+
+begin
+  for i in [1, 2, 3, 4, 5]
+    raise if i == 4
+    puts i
+  end
+rescue
+  puts "Reached 4"
+  next
+else
+  puts "No errors"
+ensure
+  puts "Iteration completed."
+end
+ 
+1 
+2 
+3 
+Reached 4 
+Iteration completed. 

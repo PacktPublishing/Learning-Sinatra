@@ -1,0 +1,4 @@
+:012 >   arr.select {|e| e.odd?}
+ => [1, 3]
+:013 > arr.select {|e| e.even?}
+ => [2]

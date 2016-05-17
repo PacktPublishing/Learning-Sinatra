@@ -1,0 +1,7 @@
+    40	post '/signup/?' do 
+    41	  # save the user data 
+    42	end 
+    43	 
+    44	get '/login/?' do 
+    45	  # show a login page 
+    46	end 

@@ -1,0 +1,5 @@
+    48	post '/edit/?' do
+    49	  user = User.first(id: session[:user_id])
+    50	  List.edit_list params[:id], params[:name], params[:items], user
+    51	  redirect request.referer
+    52	end

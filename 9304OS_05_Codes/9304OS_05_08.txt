@@ -1,0 +1,7 @@
+    24	get '/edit/:id/?' do 
+    25	  # check user permission and show the edit page 
+    26	end 
+    27	 
+    28	post '/edit/?' do 
+    29	  # update the list 
+    30	end 

@@ -1,0 +1,5 @@
+a = 1
+b = 2
+unless a == b
+  puts "The value of a is not equal to the value of b"
+end

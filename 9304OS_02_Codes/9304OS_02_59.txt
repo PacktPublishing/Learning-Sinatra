@@ -1,0 +1,10 @@
+case <expression>
+when <value1>
+  <statements>
+when <value2>
+  <statements>
+when <value3>
+  <statements>
+else
+  <statements>
+end

@@ -1,0 +1,4 @@
+:005 > arr.include? 1
+ => true
+:006 > arr.include? 4
+ => false

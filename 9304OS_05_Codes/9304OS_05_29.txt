@@ -1,0 +1,5 @@
+    14	before do
+    15	  if not request.path_info.split('/')[1] == 'login' and session[:user_id].nil?
+    16	    redirect '/login'
+    17	  end
+    18	end

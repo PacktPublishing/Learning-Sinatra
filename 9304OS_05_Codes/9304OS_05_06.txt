@@ -1,0 +1,7 @@
+    16	get '/new/?' do 
+    17	  # show create list page 
+    18	end 
+    19	 
+    20	post '/new/?' do 
+    21	  # save the list 
+    22	end 

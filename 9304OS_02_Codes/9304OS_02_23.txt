@@ -1,0 +1,2 @@
+:005 > hash.keys
+ => [:key1, :key2]

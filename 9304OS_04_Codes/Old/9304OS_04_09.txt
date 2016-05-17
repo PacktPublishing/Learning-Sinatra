@@ -1,0 +1,9 @@
+     1	require 'sequel' 
+     2	 
+     3	class List < Sequel::Model 
+     4	  set_primary_key :id 
+     5	 
+     6	  one_to_many :items 
+     7	  one_to_many :permissions 
+     8	  one_to_many :logs 
+     9	end 

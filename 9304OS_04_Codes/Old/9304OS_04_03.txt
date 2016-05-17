@@ -1,0 +1,10 @@
+     1	Sequel.migration do 
+     2	  change do 
+     3	    create_table :lists do 
+     4	      primary_key :id 
+     5	      String :name, :length => 32, :null => false 
+     6	      column :shared_with, 'enum("private", "shared", "public")', :null => false, :default => 'private' 
+     7	      DateTime :created_at 
+     8	    end 
+     9	  end 
+    10	end 

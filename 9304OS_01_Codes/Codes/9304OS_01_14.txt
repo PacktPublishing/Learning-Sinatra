@@ -1,0 +1,7 @@
+1 require ‘sinatra’
+2 require ‘haml’
+3
+4 get ‘/’ do
+5   haml :index
+6 end
+

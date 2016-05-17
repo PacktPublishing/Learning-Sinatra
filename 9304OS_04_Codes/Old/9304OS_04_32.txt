@@ -1,0 +1,1 @@
+list.add_log(user:user, log_line:'user1 has created the list.')

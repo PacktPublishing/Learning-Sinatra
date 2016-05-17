@@ -1,0 +1,5 @@
+   124	get '/logout/?' do
+   125	  session[:user_id] = nil
+   126	  redirect '/login'
+   127	end
+

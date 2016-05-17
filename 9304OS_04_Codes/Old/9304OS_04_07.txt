@@ -1,0 +1,11 @@
+     1	Sequel.migration do 
+     2	  change do 
+     3	    create_table :logs do 
+     4	      primary_key :id 
+     5	      foreign_key :user_id, :users, :null => false 
+     6	      foreign_key :list_id, :lists, :null => false 
+     7	      String :log_line, :length => 256, :null => false 
+     8	      DateTime :created_at 
+     9	    end 
+    10	  end 
+    11	end 

@@ -1,0 +1,9 @@
+    10	  def self.new_list name, items, user
+    11	    list = List.create(name: name, created_at: Time.now)
+    12	    items.each do |item|
+    13	      Item.create(name: item[:name], description: item[:description], list: list, user: user, created_at: Time.now, updated_at: Time.now)
+    14	    end
+    15	    Permission.create(list: list, user: user, permission_level: 'read_write', created_at: Time.now, updated_at: Time.now)
+    16	
+    17	    return list
+    18	  end

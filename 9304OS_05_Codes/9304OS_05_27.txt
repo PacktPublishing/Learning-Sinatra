@@ -1,0 +1,10 @@
+   113	post '/login/?' do
+   114	  md5sum = Digest::Md5.hexdigest params[:password]
+   115	  user = User.first(name: params[:name], password: md5sum)
+   116	  if user.nil?
+   117	    haml :error, locals: {error: 'Invalid login credentials'}
+   118	  else
+   119	    session[:user_id] = user.id
+   120	    redirect '/'
+   121	  end
+   122	end

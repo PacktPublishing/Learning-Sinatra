@@ -1,0 +1,2 @@
+Fixnum even?, odd?, to_f, to_s, times
+Float floor, ceiling, round, to_i, to_s

@@ -1,0 +1,4 @@
+    98	post '/signup/?' do
+    99	  md5sum = Digest::Md5.hexdigest params[:password]
+   100	  User.create(name: params[:name], password: md5sum)
+   101	end

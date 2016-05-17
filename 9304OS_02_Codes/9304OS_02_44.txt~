@@ -1,0 +1,4 @@
+def foo a = 10, b = 11, c
+  puts a, b, c
+end
+foo 1, 2

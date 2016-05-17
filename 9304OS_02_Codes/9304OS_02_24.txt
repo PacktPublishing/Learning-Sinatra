@@ -1,0 +1,2 @@
+:006 > hash.select {|k,v| hash[k] == 2}
+ => {:key2=>2}

@@ -1,0 +1,5 @@
+1 require 'sinatra'
+2 
+3 get '/' do
+4   return 'Hello World!'
+5 end

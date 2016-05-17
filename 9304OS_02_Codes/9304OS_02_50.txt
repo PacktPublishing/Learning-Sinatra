@@ -1,0 +1,7 @@
+if <condition>
+  <statements>
+elsif <condition>
+  <statements>
+else
+  <statements>
+end
