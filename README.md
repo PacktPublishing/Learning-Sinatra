@@ -1,8 +1,3 @@
-## $5 Tech Unlocked 2021!
-[Buy and download this product for only $5 on PacktPub.com](https://www.packtpub.com/)
------
-*The $5 campaign         runs from __December 15th 2020__ to __January 13th 2021.__*
-
 # Learning-Sinatra
 Code Bundle for [Learning Sinatra](https://www.packtpub.com/web-development/learning-sinatra?utm_source=github&utm_medium=repository&utm_campaign=9781849519304), published by Packt Publishing, it contains all the code files required to get started with this book from start to finish.
 ##What you need for this Code files:
